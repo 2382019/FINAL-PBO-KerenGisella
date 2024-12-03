@@ -10,4 +10,32 @@ public class Mahasiswi {
         this.asrama = asrama;
         this.nomorKamar = nomorKamar;
     }
+
+    public Mahasiswi() {
+
+    }
+
+    public String getNama() {
+        return nama;
+    }
+
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+
+    public String getAsrama() {
+        return asrama;
+    }
+
+    public void setAsrama(String asrama) {
+        this.asrama = asrama;
+    }
+
+    public String getNomorKamar() {
+        return nomorKamar;
+    }
+
+    public void setNomorKamar(String nomorKamar) {
+        this.nomorKamar = nomorKamar;
+    }
 }
