@@ -1,18 +1,9 @@
 package services;
 
-import entities.MahasiswiSlip;
-import repositories.MahasiswiSlipRepository;
-
-import java.util.List;
+import entities.Mahasiswi;
+import entities.Slip;
 
 public interface MahasiswiSlipService {
-    void addMahasiswiSlip(MahasiswiSlip mahasiswiSlip);
-
-    List<MahasiswiSlip> lihatSemuaMahasiswiSlip();
-
-    MahasiswiSlip cariMahasiswiSlipBerdasarkanNama(String nama);
-
-    boolean updateMahasiswiSlip(String nama, MahasiswiSlip mahasiswiSlipBaru);
-
-    boolean deleteMahasiswiSlip(String nama);
+    void tambahMahasiswi(Mahasiswi mahasiswi);
+    void tambahSlip(Slip slip);
 }
