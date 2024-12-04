@@ -1,4 +1,4 @@
-package entities;
+package mahasiswislipapp.entities;
 
 public class Mahasiswi {
     public String nama;

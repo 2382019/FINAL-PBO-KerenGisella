@@ -1,10 +1,13 @@
-package views;
+package mahasiswislipapp.views;
 
-import entities.Mahasiswi;  // Mengimpor class Mahasiswi
-import entities.Slip;      // Mengimpor class Slip
+import mahasiswislipapp.entities.Mahasiswi;  // Mengimpor class Mahasiswi
+import mahasiswislipapp.entities.Slip;      // Mengimpor class Slip
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList; // Untuk daftar Mahasiswi dan Slip
 import java.util.Scanner;   // Untuk input terminal
 
+@Component
 public class MahasiswiSlipTerminalViewImpl implements MahasiswiSlipView {
     private Scanner scanner;
     private ArrayList<Mahasiswi> daftarMahasiswi;

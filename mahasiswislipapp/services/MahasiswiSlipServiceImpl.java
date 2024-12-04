@@ -1,9 +1,11 @@
-package services;
+package mahasiswislipapp.services;
 
-import entities.Mahasiswi;
-import entities.Slip;
-import repositories.MahasiswiSlipRepository;
+import mahasiswislipapp.entities.Mahasiswi;
+import mahasiswislipapp.entities.Slip;
+import mahasiswislipapp.repositories.MahasiswiSlipRepository;
+import org.springframework.stereotype.Component;
 
+@Component
 public class MahasiswiSlipServiceImpl implements MahasiswiSlipService {
     private final MahasiswiSlipRepository repository;
 

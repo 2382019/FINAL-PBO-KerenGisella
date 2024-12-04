@@ -1,4 +1,4 @@
-package config;
+package mahasiswislipapp.config;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

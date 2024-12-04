@@ -1,7 +1,7 @@
-package repositories;
+package mahasiswislipapp.repositories;
 
-import entities.Mahasiswi;
-import entities.Slip;
+import mahasiswislipapp.entities.Mahasiswi;
+import mahasiswislipapp.entities.Slip;
 
 import java.util.ArrayList;
 

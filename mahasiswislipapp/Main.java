@@ -1,16 +1,15 @@
-import config.Database;
-import entities.Mahasiswi;
-import entities.Slip;
-import repositories.MahasiswiSlipRepository;
-import repositories.MahasiswiSlipRepositoryDbImpl;
-import repositories.MahasiswiSlipRepositoryImpl;
-import services.MahasiswiSlipServiceImpl;
-import services.MahasiswiSlipService;
-import views.MahasiswiSlipView;
-import views.MahasiswiSlipTerminalViewImpl;
+package mahasiswislipapp;
+
+import mahasiswislipapp.config.Database;
+import mahasiswislipapp.entities.Mahasiswi;
+import mahasiswislipapp.entities.Slip;
+import mahasiswislipapp.views.MahasiswiSlipTerminalViewImpl;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Bean;
 
 import java.util.ArrayList;
 
+@Component
 public class Main {
     public static void main(String[] args) {
 

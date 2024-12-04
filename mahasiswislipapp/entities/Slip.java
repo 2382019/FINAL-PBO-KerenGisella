@@ -1,4 +1,4 @@
-package entities;
+package mahasiswislipapp.entities;
 
 public class Slip {
     public Mahasiswi mahasiswi;

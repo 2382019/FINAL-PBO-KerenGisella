@@ -1,8 +1,9 @@
-package repositories;
+package mahasiswislipapp.repositories;
 
-import config.Database;
-import entities.Slip;
-import entities.Mahasiswi;
+import mahasiswislipapp.config.Database;
+import mahasiswislipapp.entities.Slip;
+import mahasiswislipapp.entities.Mahasiswi;
+import org.springframework.stereotype.Component;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -10,6 +11,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class MahasiswiSlipRepositoryDbImpl implements MahasiswiSlipRepository {
     private final Database database;
 

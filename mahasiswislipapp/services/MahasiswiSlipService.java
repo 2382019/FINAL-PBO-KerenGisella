@@ -1,7 +1,7 @@
-package services;
+package mahasiswislipapp.services;
 
-import entities.Mahasiswi;
-import entities.Slip;
+import mahasiswislipapp.entities.Mahasiswi;
+import mahasiswislipapp.entities.Slip;
 
 public interface MahasiswiSlipService {
     void tambahMahasiswi(Mahasiswi mahasiswi);
