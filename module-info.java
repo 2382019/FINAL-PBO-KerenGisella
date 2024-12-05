@@ -2,6 +2,7 @@ module mahasiswislipapp {
     requires spring.context;
     requires spring.beans;
     requires java.sql;
+    requires java.xml.crypto;
 
     opens mahasiswislipapp;
     opens mahasiswislipapp.entities;
