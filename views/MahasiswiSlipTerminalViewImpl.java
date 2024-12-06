@@ -2,6 +2,8 @@ package views;
 
 import entities.Mahasiswi;  // Mengimpor class Mahasiswi
 import entities.Slip;      // Mengimpor class Slip
+import services.MahasiswiSlipService;
+
 import java.util.ArrayList; // Untuk daftar Mahasiswi dan Slip
 import java.util.Scanner;   // Untuk input terminal
 
@@ -14,6 +16,9 @@ public class MahasiswiSlipTerminalViewImpl implements MahasiswiSlipView {
         this.scanner = new Scanner(System.in);
         this.daftarMahasiswi = daftarMahasiswi;
         this.daftarSlip = daftarSlip;
+    }
+
+    public MahasiswiSlipTerminalViewImpl(MahasiswiSlipService mahasiswiSlipService) {
     }
 
     @Override

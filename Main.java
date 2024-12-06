@@ -21,6 +21,9 @@ public class Main {
         ArrayList<Slip> daftarSlip = new ArrayList<>();
 
         MahasiswiSlipTerminalViewImpl view = new MahasiswiSlipTerminalViewImpl(daftarMahasiswi, daftarSlip);
+        MahasiswiSlipRepository mahasiswiSlipRepository = new MahasiswiSlipRepositoryDbImpl(database);
+        MahasiswiSlipService mahasiswiSlipService = new MahasiswiSlipServiceImpl(mahasiswiSlipRepository);
+        MahasiswiSlipView mahasiswiSlipView = new MahasiswiSlipTerminalViewImpl(mahasiswiSlipService);
 
         view.jalankanMenuUtama();
     }
