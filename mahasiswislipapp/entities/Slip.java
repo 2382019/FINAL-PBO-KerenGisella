@@ -1,11 +1,11 @@
 package mahasiswislipapp.entities;
 
 public class Slip {
-    private Mahasiswi mahasiswi;
-    private String jenisSlip;
-    private String alasan;
-    private String tanggalKeluar;
-    private String waktuKembali;
+    public Mahasiswi mahasiswi;
+    public String jenisSlip;
+    public String alasan;
+    public String tanggalKeluar;
+    public String waktuKembali;
 
     public Slip(Mahasiswi mahasiswi, String jenisSlip, String alasan, String tanggalKeluar) {
         this.mahasiswi = mahasiswi;

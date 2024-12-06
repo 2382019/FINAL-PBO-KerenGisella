@@ -15,6 +15,11 @@ public class MahasiswiSlipRepositoryImpl implements MahasiswiSlipRepository {
     }
 
     @Override
+    public void add(Mahasiswi mahasiswi) {
+
+    }
+
+    @Override
     public void add(Slip slip) {
 
     }
