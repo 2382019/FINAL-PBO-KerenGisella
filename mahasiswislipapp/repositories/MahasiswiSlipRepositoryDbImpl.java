@@ -8,6 +8,8 @@ import org.springframework.stereotype.Component;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,8 +42,8 @@ public class MahasiswiSlipRepositoryDbImpl implements MahasiswiSlipRepository {
                 // Set Slip fields
                 slip.setJenisSlip(resultSet.getString("jenisSlip"));
                 slip.setAlasan(resultSet.getString("alasan"));
-                slip.setTanggalKeluar(resultSet.getString("tanggalKeluar"));
-                slip.setWaktuKembali(resultSet.getString("waktuKembali"));
+                slip.setTanggalKeluar(String.valueOf(LocalDate.parse(resultSet.getString("tanggalKeluar"))));
+                slip.setWaktuKembali(String.valueOf(LocalTime.parse(resultSet.getString("waktuKembali"))));
 
                 slips.add(slip);
             }

@@ -1,6 +1,7 @@
 package mahasiswislipapp.entities;
 
 public class Slip {
+    public int id;
     public Mahasiswi mahasiswi;
     public String jenisSlip;
     public String alasan;
@@ -57,5 +58,9 @@ public class Slip {
 
     public void setWaktuKembali(String waktuKembali) {
         this.waktuKembali = waktuKembali;
+    }
+
+    public int getId() {
+        return id;
     }
 }
