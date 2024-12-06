@@ -90,7 +90,7 @@ public class MahasiswiSlipTerminalViewImpl implements MahasiswiSlipView {
 
         tampilkanPesan("Daftar Mahasiswi:");
         for (int i = 0; i < daftarMahasiswi.size(); i++) {
-            System.out.println((i + 1) + ". " + daftarMahasiswi.get(i).nama);
+            System.out.println((i + 1) + ". " + daftarMahasiswi.get(i).getNama());
         }
 
         int pilihan = Integer.parseInt(input("Pilih nomor mahasiswi")) - 1;
@@ -125,9 +125,9 @@ public class MahasiswiSlipTerminalViewImpl implements MahasiswiSlipView {
         }
 
         Slip slip = daftarSlip.get(pilihan);
-        slip.jenisSlip = input("Jenis slip baru (Keluar/Weekend) (" + slip.jenisSlip + ")");
-        slip.alasan = input("Alasan baru (" + slip.alasan + ")");
-        slip.tanggalKeluar = input("Tanggal keluar baru (" + slip.tanggalKeluar + ")");
+        slip.setJenisSlip(input("Jenis slip baru (Keluar/Weekend) (" + slip.getJenisSlip() + ")"));
+        slip.setAlasan(input("Alasan baru (" + slip.getAlasan() + ")"));
+        slip.setTanggalKeluar(input("Tanggal keluar baru (" + slip.getTanggalKeluar() + ")"));
         tampilkanPesan("Slip berhasil diperbarui.");
     }
 
@@ -141,7 +141,7 @@ public class MahasiswiSlipTerminalViewImpl implements MahasiswiSlipView {
         for (Mahasiswi mahasiswi : daftarMahasiswi) {
             tampilkanMahasiswi(mahasiswi);
             for (Slip slip : daftarSlip) {
-                if (slip.mahasiswi == mahasiswi) {
+                if (slip.getMahasiswi() == mahasiswi) {
                     tampilkanSlip(slip);
                 }
             }
@@ -160,7 +160,7 @@ public class MahasiswiSlipTerminalViewImpl implements MahasiswiSlipView {
         Slip slip = daftarSlip.get(pilihan);
         String tanggalKembali = input("Tanggal kembali (dd-MM-yyyy)");
         String waktuKembali = input("Waktu kembali (HH:mm)");
-        slip.waktuKembali = tanggalKembali + " " + waktuKembali;
+        slip.setWaktuKembali(tanggalKembali + " " + waktuKembali);
         tampilkanPesan("Waktu kembali berhasil dicatat.");
     }
 
@@ -188,7 +188,7 @@ public class MahasiswiSlipTerminalViewImpl implements MahasiswiSlipView {
         boolean ditemukan = false;
 
         for (Slip slip : daftarSlip) {
-            if (slip.jenisSlip.equalsIgnoreCase(jenisSlip)) {
+            if (slip.getJenisSlip().equalsIgnoreCase(jenisSlip)) {
                 tampilkanSlip(slip);
                 ditemukan = true;
             }
@@ -209,19 +209,19 @@ public class MahasiswiSlipTerminalViewImpl implements MahasiswiSlipView {
     }
 
     private void tampilkanMahasiswi(Mahasiswi mahasiswi) {
-        System.out.println("Nama: " + mahasiswi.nama);
-        System.out.println("Asrama: " + mahasiswi.asrama);
-        System.out.println("Nomor Kamar: " + mahasiswi.nomorKamar);
+        System.out.println("Nama: " + mahasiswi.getNama());
+        System.out.println("Asrama: " + mahasiswi.getAsrama());
+        System.out.println("Nomor Kamar: " + mahasiswi.getNomorKamar());
         System.out.println("--------------------");
     }
 
     private void tampilkanSlip(Slip slip) {
-        System.out.println("Nama: " + slip.mahasiswi.nama);
-        System.out.println("Jenis Slip: " + slip.jenisSlip);
-        System.out.println("Alasan: " + slip.alasan);
-        System.out.println("Tanggal Keluar: " + slip.tanggalKeluar);
-        if (slip.waktuKembali != null) {
-            System.out.println("Tanggal Kembali: " + slip.waktuKembali);
+        System.out.println("Nama: " + slip.getMahasiswi().getNama());
+        System.out.println("Jenis Slip: " + slip.getJenisSlip());
+        System.out.println("Alasan: " + slip.getAlasan());
+        System.out.println("Tanggal Keluar: " + slip.getTanggalKeluar());
+        if (slip.getWaktuKembali() != null) {
+            System.out.println("Tanggal Kembali: " + slip.getWaktuKembali());
         }
         System.out.println("--------------------");
     }
@@ -229,7 +229,7 @@ public class MahasiswiSlipTerminalViewImpl implements MahasiswiSlipView {
     private void tampilkanDaftarSlip() {
         tampilkanPesan("DAFTAR SLIP");
         for (int i = 0; i < daftarSlip.size(); i++) {
-            System.out.println((i + 1) + ". " + daftarSlip.get(i).mahasiswi.nama + " - " + daftarSlip.get(i).jenisSlip);
+            System.out.println((i + 1) + ". " + daftarSlip.get(i).getMahasiswi().getNama() + " - " + daftarSlip.get(i).getJenisSlip());
         }
     }
 }

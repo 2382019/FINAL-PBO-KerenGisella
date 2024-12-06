@@ -1,9 +1,9 @@
 package mahasiswislipapp.entities;
 
 public class Mahasiswi {
-    public String nama;
-    public String asrama;
-    public String nomorKamar;
+    private String nama;
+    private String asrama;
+    private String nomorKamar;
 
     public Mahasiswi(String nama, String asrama, String nomorKamar) {
         this.nama = nama;
