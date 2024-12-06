@@ -6,6 +6,7 @@ public class Slip {
     public String alasan;
     public String tanggalKeluar;
     public String waktuKembali;
+    public int id;
 
     public Slip(Mahasiswi mahasiswi, String jenisSlip, String alasan, String tanggalKeluar) {
         this.mahasiswi = mahasiswi;
@@ -13,6 +14,7 @@ public class Slip {
         this.alasan = alasan;
         this.tanggalKeluar = tanggalKeluar;
         this.waktuKembali = null;
+        this.id = id;
     }
 
     public Slip() {
@@ -57,5 +59,13 @@ public class Slip {
 
     public void setWaktuKembali(String waktuKembali) {
         this.waktuKembali = waktuKembali;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id; // Perbaikan: id diatur dari parameter
     }
 }
